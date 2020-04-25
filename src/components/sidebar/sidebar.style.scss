@@ -1,0 +1,21 @@
+.MuiButton-text {
+	padding: 0 !important;
+}
+
+.MuiButton-label {
+	justify-content: flex-start !important;
+}
+
+.open {
+	width: 200px;
+	transition: width 0.2s;
+}
+
+.hidden {
+	width: 0px;
+
+	transition: width 0.2s;
+}
+.MuiDrawer-paperAnchorDockedLeft {
+	border-right: 0 !important;
+}
