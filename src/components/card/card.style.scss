@@ -1,0 +1,37 @@
+.card {
+	width: 160px;
+	height: 160px;
+	padding: 0 7px;
+	margin: 0 2px 15px 2px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+
+	&:hover {
+		opacity: 0.8;
+
+		cursor: pointer;
+	}
+}
+.monster-image {
+	position: relative;
+	z-index: 10;
+	height: 120px;
+	width: 120px;
+}
+
+.monster-name {
+	height: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 20;
+	text-align: center;
+	pointer-events: none;
+}

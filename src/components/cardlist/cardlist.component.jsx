@@ -6,7 +6,12 @@ const CardList = ({ pokemons }) => {
 	return (
 		<div className="card-list">
 			{pokemons.map((pokemon, index) => (
-				<Card key={index} name={pokemon.name} url={pokemon.url} />
+				<Card
+					key={index}
+					name={pokemon.name}
+					monsterId={pokemon.id}
+					colors={pokemon.typeColor}
+				/>
 			))}
 		</div>
 	);

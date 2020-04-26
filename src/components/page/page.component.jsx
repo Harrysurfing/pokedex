@@ -8,8 +8,15 @@ import CardList from "../cardlist/cardlist.component";
 
 const Page = ({ sidebarHidden, pokemons }) => {
 	const [searchField, setSearchField] = useState("");
+
+	if (!Array.isArray(pokemons)) {
+		return null;
+	}
 	const monsterFilter = pokemons.filter((pokemon) =>
 		pokemon.name.toLowerCase().includes(searchField.toLowerCase())
+	);
+	console.log(
+		isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight
 	);
 	return (
 		<div className={`page ${sidebarHidden ? "fullwidth" : "toRight"}`}>
