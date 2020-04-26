@@ -48,7 +48,6 @@ const useStyles = makeStyles({
 
 const Sidebar = ({ sidebarHidden }) => {
 	const classes = useStyles();
-	console.log(sidebarHidden);
 
 	return (
 		<div className="sidebar">

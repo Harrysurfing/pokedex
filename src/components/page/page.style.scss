@@ -1,0 +1,58 @@
+$font: "Helvetica Neue", Helvetica, Arial, Verdana, "Trebuchet MS";
+
+.page {
+	display: flex;
+	flex-direction: column;
+	padding: 0 15px;
+	background-color: #eee;
+	height: 100%;
+}
+.fullwidth {
+	margin-left: 0;
+	transition: margin-left 0.2s;
+}
+
+.toRight {
+	margin-left: 200px;
+	transition: margin-left 0.2s;
+}
+
+.page-title {
+	margin: 40px 0 10px 0;
+	font-weight: 400;
+	font-size: 34px;
+	line-height: 40px;
+	text-align: left;
+	font-family: $font;
+}
+
+.search-input {
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding: 0;
+	background-position: right center;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	box-shadow: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	font-family: $font;
+	color: rgba(0, 0, 0, 0.87);
+	height: 32px;
+	border: 0;
+	text-underline-position: below;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJyZ2JhKDAsMCwwLDAuNCkiIGQ9Ik0xNS41IDE0aC0uNzlsLS4yOC0uMjdDMTUuNDEgMTIuNTkgMTYgMTEuMTEgMTYgOS41IDE2IDUuOTEgMTMuMDkgMyA5LjUgM1MzIDUuOTEgMyA5LjUgNS45MSAxNiA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==);
+
+	&:focus {
+		outline: none;
+		border-color: rgb(160, 64, 160);
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjYTA0MGEwIiBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz48L3N2Zz4=);
+	}
+}
+
+.cardlist-container {
+	position: relative;
+	text-align: center;
+}
