@@ -15,9 +15,9 @@ const Page = ({ sidebarHidden, pokemons }) => {
 	const monsterFilter = pokemons.filter((pokemon) =>
 		pokemon.name.toLowerCase().includes(searchField.toLowerCase())
 	);
-	console.log(
-		isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight
-	);
+	// console.log(
+	// 	isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight
+	// );
 	return (
 		<div className={`page ${sidebarHidden ? "fullwidth" : "toRight"}`}>
 			<div className="page-title">Pokedex.org</div>

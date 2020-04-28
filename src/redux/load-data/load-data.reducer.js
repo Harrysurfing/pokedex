@@ -4,7 +4,7 @@ const INITIAL_STATE = {
 	pokemons: [],
 };
 
-const loadDataReducer = (state = INITIAL_STATE, { type, payload }) => {
+export const loadDataReducer = (state = INITIAL_STATE, { type, payload }) => {
 	switch (type) {
 		case LoadDataActionTypes.LOAD_DATA:
 			return { ...state, pokemons: payload };
@@ -13,4 +13,18 @@ const loadDataReducer = (state = INITIAL_STATE, { type, payload }) => {
 	}
 };
 
-export default loadDataReducer;
+const LOAD_DATA_INITIAL_STATE = {
+	dataLoaded: false,
+};
+
+export const loadCompleteReducer = (
+	state = LOAD_DATA_INITIAL_STATE,
+	action
+) => {
+	switch (action.type) {
+		case LoadDataActionTypes.LOAD_COMPLETE:
+			return { ...state, dataLoaded: true };
+		default:
+			return state;
+	}
+};

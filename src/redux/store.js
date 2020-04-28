@@ -24,12 +24,14 @@ fetch(`${url}/pokemon?offset=0&limit=649`)
 						),
 					}))
 			)
-		).then((res) => {
-			store.dispatch({
-				type: LoadDataActionTypes.LOAD_DATA,
-				payload: res,
-			});
-		});
+		)
+			.then((res) => {
+				store.dispatch({
+					type: LoadDataActionTypes.LOAD_DATA,
+					payload: res,
+				});
+			})
+			.then(() => store.dispatch({ type: LoadDataActionTypes.LOAD_COMPLETE }));
 	});
 
 export default store;

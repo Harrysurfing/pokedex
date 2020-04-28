@@ -6,3 +6,10 @@ export const selectPokemons = createSelector(
 	selectPokemonData,
 	(pokemonData) => pokemonData.pokemons
 );
+
+const selectDataLoadComplete = (state) => state.loadDataComplete;
+
+export const selectDataLoaded = createSelector(
+	selectDataLoadComplete,
+	(dataLoadStatus) => dataLoadStatus.dataLoaded
+);
