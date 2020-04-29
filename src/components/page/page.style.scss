@@ -1,5 +1,13 @@
 $font: "Helvetica Neue", Helvetica, Arial, Verdana, "Trebuchet MS";
 
+.loading {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .page {
 	display: flex;
 	flex-direction: column;

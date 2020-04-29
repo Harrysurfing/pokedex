@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import "./page.style.scss";
 import { selectSidebarHidden } from "../../redux/sidebar/sidebar.selector";
-import { selectPokemons } from "../../redux/load-data/data.selector";
+import {
+	selectPokemons,
+	selectDataLoaded,
+} from "../../redux/load-data/data.selector";
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import CardList from "../cardlist/cardlist.component";
+import { CircularProgress } from "@material-ui/core";
 
-const Page = ({ sidebarHidden, pokemons }) => {
+const Page = ({ sidebarHidden, pokemons, dataLoaded }) => {
 	const [searchField, setSearchField] = useState("");
 
-	if (!Array.isArray(pokemons)) {
-		return null;
+	if (!dataLoaded) {
+		return (
+			<div className="loading">
+				<CircularProgress />
+				<span>Data Loading....</span>
+			</div>
+		);
 	}
 	const monsterFilter = pokemons.filter((pokemon) =>
 		pokemon.name.toLowerCase().includes(searchField.toLowerCase())
@@ -42,6 +51,7 @@ const Page = ({ sidebarHidden, pokemons }) => {
 const mapStateToProps = createStructuredSelector({
 	sidebarHidden: selectSidebarHidden,
 	pokemons: selectPokemons,
+	dataLoaded: selectDataLoaded,
 });
 
 export default connect(mapStateToProps)(Page);
