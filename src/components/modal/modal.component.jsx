@@ -13,6 +13,7 @@ import IconButton from "@material-ui/core/IconButton";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { Spring } from "react-spring/renderprops";
 import Profile from "../modal-content/profile/profile.component";
+import Moves from "../modal-content/moves/moves.component";
 
 const Modal = ({ pokemonData, dataLoaded, match, history }) => {
 	const id = match.params.id;
@@ -53,6 +54,7 @@ const Modal = ({ pokemonData, dataLoaded, match, history }) => {
 							<div className="info-container" style={props}>
 								<BasicInfo imageUrl={imageUrl} pokemon={pokemon} id={id} />
 								<Profile pokemon={pokemon} />
+								<Moves pokemon={pokemon} />
 							</div>
 						)}
 					</Spring>

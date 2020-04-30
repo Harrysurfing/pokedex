@@ -1,0 +1,39 @@
+.moves-container {
+	margin: 0 15px 10px 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.moves-details {
+	display: flex;
+	flex-direction: column;
+}
+
+.moves-header {
+	font-size: 20px;
+	padding-left: 10px;
+	margin: 20px 0;
+	height: 32px;
+	display: flex;
+	align-items: center;
+}
+
+.moves-row {
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 20px 10px;
+}
+
+.move-number {
+	flex-basis: 30%;
+}
+
+.move-name {
+	flex-basis: 20%;
+}
+
+.drop-icon {
+	flex-basis: 30%;
+	display: flex;
+	justify-content: flex-end;
+}
