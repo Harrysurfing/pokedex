@@ -48,6 +48,7 @@ const useStyles = makeStyles({
 
 const Sidebar = ({ sidebarHidden }) => {
 	const classes = useStyles();
+	const link = "https://github.com/Harrysurfing/pokedex";
 
 	return (
 		<div className="sidebar">
@@ -65,7 +66,13 @@ const Sidebar = ({ sidebarHidden }) => {
 						<Button className={classes.sideItemButton}>Pokémon</Button>
 					</ListItem>
 					<ListItem className={classes.sideItem}>
-						<Button className={classes.sideItemButton}>About</Button>
+						<Button
+							href={link}
+							target="_blank"
+							className={classes.sideItemButton}
+						>
+							About
+						</Button>
 					</ListItem>
 				</List>
 			</Drawer>

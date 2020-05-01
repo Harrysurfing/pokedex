@@ -22,18 +22,47 @@
 	display: flex;
 	justify-content: flex-start;
 	margin: 0 20px 10px;
+	flex-wrap: wrap;
 }
 
 .move-number {
 	flex-basis: 30%;
+	font-size: 14px;
 }
 
 .move-name {
 	flex-basis: 20%;
+	font-size: 14px;
 }
 
 .drop-icon {
 	flex-basis: 30%;
 	display: flex;
 	justify-content: flex-end;
+}
+.drop-info {
+	flex-basis: 100%;
+	text-align: left;
+	padding-left: 15px;
+	background: rgba(0, 0, 0, 0.05);
+	font-size: 14px;
+}
+
+.more-icon {
+	border-radius: 50%;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.4);
+		cursor: pointer;
+	}
+}
+
+.less-icon {
+	border-radius: 50%;
+	transform: rotate(180deg);
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.4);
+		cursor: pointer;
+	}
 }
